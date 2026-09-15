@@ -24,4 +24,4 @@ Allow: /
 User-agent: Yeti
 Allow: /
 
-Sitemap: https://smithsfarm.kr/sitemap.xml
+Sitemap: https://smithsfarm.vercel.app/sitemap.xml

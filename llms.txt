@@ -31,7 +31,7 @@
 - 2024 한국브랜드 소비자평가 대상
 
 ## 링크
-- 홈페이지: https://smithsfarm.kr/
+- 홈페이지: https://smithsfarm.vercel.app/
 - 캐치테이블: https://app.catchtable.co.kr/ct/shop/smithsfarm
 - 네이버 예약: https://booking.naver.com/booking/6/bizes/1019950
 - 네이버 플레이스: https://m.place.naver.com/restaurant/1559749328/home

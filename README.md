@@ -14,7 +14,7 @@ llms.txt          생성형 AI 엔진용 사실 요약 (GEO)
 ```
 
 ## 배포 전 바꿔야 할 것
-1. `https://smithsfarm.kr/` → 실제 도메인으로 일괄 치환 (index.html · sitemap.xml · robots.txt · llms.txt)
+1. 현재 주소 `https://smithsfarm.vercel.app/` → 커스텀 도메인 구매 시 일괄 치환 (index.html · sitemap.xml · robots.txt · llms.txt)
 2. `postalCode`(48099)는 추정값 → 우편번호 검색으로 확정 (좌표는 네이버 지역검색 API 값 35.1639136, 129.1452199 적용)
 3. 전화번호: 캐치테이블 기준 `010-2901-5663`. 네이버/다이닝코드는 `0507-1392-5663`(안심번호) → 대표번호 하나로 통일
 4. 금·토 연장 영업(~24:00) 여부 확인 후 `openingHoursSpecification` 갱신
