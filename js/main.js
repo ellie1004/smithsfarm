@@ -86,6 +86,10 @@
   dlg.addEventListener('click', function (e) {
     if (e.target === dlg) { close(); }            /* backdrop click */
   });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && dlg.open) { e.preventDefault(); close(); }
+  });
+  dlg.addEventListener('cancel', function (e) { e.preventDefault(); close(); });
   dlg.addEventListener('close', function () {
     img.removeAttribute('src');
     if (opener) { opener.focus(); opener = null; } /* return focus */
