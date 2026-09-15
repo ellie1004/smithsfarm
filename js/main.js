@@ -55,3 +55,39 @@
     targets.forEach(function (el) { el.classList.add('is-in'); });
   }
 })();
+
+/* Lightbox: zoom menu photos (native <dialog>, keyboard + screen-reader friendly) */
+(function () {
+  'use strict';
+  var dlg = document.getElementById('lightbox');
+  if (!dlg || typeof dlg.showModal !== 'function') { return; }
+  var img = document.getElementById('lightbox-img');
+  var cap = document.getElementById('lightbox-caption');
+  var opener = null;
+
+  function open(btn) {
+    opener = btn;
+    var src = btn.getAttribute('data-large');
+    var text = btn.getAttribute('data-caption') || '';
+    var thumb = btn.querySelector('img');
+    img.src = src;
+    img.alt = thumb ? thumb.alt : text;
+    cap.textContent = text;
+    dlg.showModal();
+    dlg.querySelector('[data-close]').focus();
+  }
+  function close() {
+    if (dlg.open) { dlg.close(); }
+  }
+  document.querySelectorAll('.zoom[data-large]').forEach(function (btn) {
+    btn.addEventListener('click', function () { open(btn); });
+  });
+  dlg.querySelector('[data-close]').addEventListener('click', close);
+  dlg.addEventListener('click', function (e) {
+    if (e.target === dlg) { close(); }            /* backdrop click */
+  });
+  dlg.addEventListener('close', function () {
+    img.removeAttribute('src');
+    if (opener) { opener.focus(); opener = null; } /* return focus */
+  });
+})();
